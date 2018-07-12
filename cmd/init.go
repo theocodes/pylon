@@ -1,4 +1,4 @@
-// Copyright © 2018 NAME HERE <EMAIL ADDRESS>
+// Copyright © 2018 Theo Felippe <theocodes@gmail.com>
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -25,9 +25,11 @@ var initCmd = &cobra.Command{
 	Use:   "init",
 	Short: "Initializes Pylon's configuration",
 	Long:  ``,
-	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("init called")
-	},
+	Run:   execute,
+}
+
+func execute(cmd *cobra.Command, args []string) {
+	fmt.Println("init called")
 }
 
 func init() {
